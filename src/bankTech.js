@@ -11,13 +11,16 @@ BankTech.prototype.getCurrentBalance = function () {
 
 BankTech.prototype.deposit = function (amount) {
   this.balance += amount
-  this.transactions.push('+${amount}')
+  this.transactions.push('+' + amount);
 };
 
 BankTech.prototype.withdraw = function (amount) {
   this.balance -= amount
+  this.transactions.push('-' + amount);
 };
 
 BankTech.prototype.getAllTransactions = function () {
-
+  this.transactions.forEach(function (transaction) {
+    console.log(transaction);
+  })
 };

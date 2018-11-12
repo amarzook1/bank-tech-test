@@ -30,6 +30,6 @@ describe('BankTech', function () {
   it('it gets all transactions', function () {
     bank.deposit(200)
     bank.withdraw(100)
-    expect(bank.getAllTransactions()).toContain("200", "100")
+    expect(bank.getAllTransactions()).toContain("+200", "-100")
   })
 });
